@@ -9,14 +9,14 @@ const App = () => {
     const [state, dispatch] = useReducer(UserReducer, initialUserState);
 
     return (
-        <UserContext.Provider value={[state, dispatch]}>
+        <UserContext value={[state, dispatch]}>
             <Router>
                 <MyAppBar />
                 <Box display="flex" flexDirection="column" alignItems="center" justifyContent="center" height="100vh" padding="20px">
                     <AppRoutes /> {/* השתמש בקומפוננטה החדשה */}
                 </Box>
             </Router>
-        </UserContext.Provider>
+        </UserContext>
     );
 };
 

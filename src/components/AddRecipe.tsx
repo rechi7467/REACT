@@ -25,7 +25,13 @@ const AddRecipe: React.FC = () => {
             });
             alert(response.data.message);
         } catch (error: any) {
-            alert(error.response.data.message);
+            if (error.response) {
+                alert(`Error: ${error.response.data.message}`);
+            } else if (error.request) {
+                alert('Error: No response from server');
+            } else {
+                alert(`Error: ${error.message}`);
+            }
         }
     };
     return (

@@ -68,11 +68,12 @@ const Login: React.FC<LoginProps> = ({ status, setOpenLogin }) => {
 
         } catch (err: any) {
             console.error('Error:', err);
-            if (err.response.status === 400) {
-                alert('User already exists in the system!');
-            }
-            if (err.response.status === 401) {
-                alert("You must register");
+            if (err.response) {
+                alert(`Error: ${err.response.data.message}`);
+            } else if (err.request) {
+                alert('Error: No response from server');
+            } else {
+                alert(`Error: ${err.message}`);
             }
         }
     };
