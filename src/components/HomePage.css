@@ -1,0 +1,45 @@
+.homepage {
+    background-image: url('../imgs/flat-lay-bakery-composition-with-copyspace.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: pink;
+    text-align: center;
+    font-size: 80px;
+    color: deeppink;
+    font-weight: bolder;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+
+
+}
+
+html,
+body {
+    height: 100%;
+    margin: 0;
+}
+
+.recipes {
+    color: deeppink;
+}
+
+.bg {
+    background-image: url('../imgs/flat-lay-bakery-composition-with-copyspace.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    width: 100%;
+    position: absolute;
+    overflow: auto
+}
+
+body {
+    overflow: hidden;
+}
